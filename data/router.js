@@ -5,7 +5,6 @@ const db = require("./db.js");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  // res.send('hello from /api/posts/')
   try {
     const posts = await db.find();
     res.status(200).json(posts);
